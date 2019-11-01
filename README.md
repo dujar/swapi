@@ -19,7 +19,7 @@ npm start
 ```
 This should run the app.
 
-## PRODUCTION BUILT
+## PRODUCTION BUILD
 
 For production build, a server of your choice needs to serve the compiled react static files.
 

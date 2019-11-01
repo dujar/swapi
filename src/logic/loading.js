@@ -111,13 +111,12 @@ async function getInfo(data) {
     // ○ Gender
     person.gender = parseValue(data.gender)
     // ○ Starship Name(s) belonging to the Person (Display)
-    // Starship Model
     let starships = await getMultipleFetch(data.starships)
     person.starships = '-'
     if (starships && starships.length > 0) {
         person.starships = starships.map(starship => ({
             model: parseValue(starship.model),
-            class: parseValue(starship.class),
+            starship_class: parseValue(starship.starship_class),
             hyperdrive_rating: parseValue(starship.hyperdrive_rating),
             cost_in_credits: parseValue(starship.cost_in_credits),
             manufacturer: parseValue(starship.manufacturer)
